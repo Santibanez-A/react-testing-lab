@@ -1,7 +1,3 @@
-import './test_suites/AddTransactions.test'
-import './test_suites/DisplayTransactions.test'
-import './test_suites/SearchSort.test'
-
 import { render, screen } from "@testing-library/react";
 import App from "../components/App";
 
