@@ -1,21 +1,23 @@
 import React from "react";
 
-function AddTransactionForm({postTransaction}) {
-  function submitForm(e){
+function AddTransactionForm({ postTransaction }) {
+  function submitForm(e) {
     e.preventDefault()
+    const form = e.currentTarget.elements;
+
     const newTransaction = {
-      date: e.target.date.value,
-      description: e.target.description.value,
-      category: e.target.category.value,
-      amount: e.target.amount.value
-    }
+      date: form.date.value,
+      description: form.description.value,
+      category: form.category.value,
+      amount: form.amount.value,
+    };
     postTransaction(newTransaction)
 
   }
 
   return (
     <div className="ui segment">
-      <form className="ui form" onSubmit={(e)=>{submitForm(e)}}>
+      <form className="ui form" onSubmit={(e) => { submitForm(e) }}>
         <div className="inline fields">
           <input type="date" name="date" />
           <input type="text" name="description" placeholder="Description" />

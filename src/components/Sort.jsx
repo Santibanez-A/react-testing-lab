@@ -1,6 +1,6 @@
-function Sort({onSort}){
-    return(
-        <select onChange={(e)=>{
+function Sort({ onSort }) {
+    return (
+        <select onChange={(e) => {
             onSort(e.target.value)
         }}>
             <option value={"description"}>Description</option>
@@ -8,4 +8,4 @@ function Sort({onSort}){
         </select>
     )
 }
-export default Sort
+export default Sort;
